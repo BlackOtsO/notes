@@ -1,0 +1,43 @@
+ polymorphism allows you to define one interface and have multiple implementations.
+
+    Compile-time Polymorphism
+    Runtime Polymorphism
+
+
+complier-time->
+program
+-------
+
+public class polymorphism
+{
+ public int mul(int a)
+  {
+   return a*a;
+  }
+ public int mul(int a,int b)
+ {
+   return a*b;
+ }
+ public  float mul(int a,int b)
+ {
+  return a*b;
+  }
+}
+public class Main{
+ public static void main(String[]args)
+   {
+     polymorphism obj=new polymorphism();
+     obj.mul(2);
+     obj.mul(3,4);
+     obj.mul(3.5,9.8);
+
+  }}
+
+runtime->
+parentclass->method()
+subclass extends parentclass
+subclass->method()
+create obj for subclass
+call method();
+show subclass method() properties
+because->subclass overriding parentclass method()

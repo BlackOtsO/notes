@@ -1,0 +1,70 @@
+A class is a blueprint for creating objects, defining a new data type from which objects are instantiated.
+When you declare an object of a class,
+
+ object create an instance of that class.
+While a class is a logical construct, an object has a physical reality, occupying space in memory.
+Objects have three essential properties: state (the value from its data type), 
+identity (the unique memory location where its value is stored),
+and behavior (the operations that can be performed on its data type).
+In Java, the dot operator (.) links the object's name with its instance variables.
+The new keyword dynamically allocates memory for an object at runtime and returns a reference to it, 
+which is stored in a variable. Hence, in Java, all class objects are dynamically allocated.
+
+program
+-------
+class Car {
+    // Attributes
+    String variant;
+    int maxSpeed;
+    int fuelCapacity;
+    int seatingCapacity;
+
+    // Constructor
+    public Car(String variant, int maxSpeed, int fuelCapacity, int seatingCapacity) {
+        this.variant = variant;
+        this.maxSpeed = maxSpeed;
+        this.fuelCapacity = fuelCapacity;
+        this.seatingCapacity = seatingCapacity;
+    }
+
+    // Method to display car details
+    public void displayDetails() {
+        System.out.println("Variant: " + variant);
+        System.out.println("Max Speed: " + maxSpeed + " km/h");
+        System.out.println("Fuel Capacity: " + fuelCapacity + " liters");
+        System.out.println("Seating Capacity: " + seatingCapacity + " passengers");
+        System.out.println();
+    }
+
+    // Method to update car details
+    public void updateDetails(int maxSpeed, int fuelCapacity, int seatingCapacity) {
+        this.maxSpeed = maxSpeed;
+        this.fuelCapacity = fuelCapacity;
+        this.seatingCapacity = seatingCapacity;
+    }
+ public static void main(String[] args) {
+        // Creating car objects for different variants
+        Car sedan = new Car("Sedan", 220, 55, 5);
+        Car suv = new Car("SUV", 200, 65, 7);
+        Car hatchback = new Car("Hatchback", 180, 45, 5);
+        Car sportsCar = new Car("Sports Car", 320, 70, 2);
+        Car electricCar = new Car("Electric Car", 250, 85, 5);
+
+        // Displaying car details
+        sedan.displayDetails();
+        suv.displayDetails();
+        hatchback.displayDetails();
+        sportsCar.displayDetails();
+        electricCar.displayDetails();
+
+        // Updating car details
+        sedan.updateDetails(230, 60, 5);
+        sedan.displayDetails();
+
+        // Comparing two cars
+        suv.compareCar(hatchback);
+    }
+}
+
+
+

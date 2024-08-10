@@ -1,0 +1,59 @@
+Encapsulation in Java refers to integrating data (variables) and code (methods) into a single unit.
+In encapsulation, a class's variables are hidden from other classes and can only be accessed by the methods of the class 
+
+program
+------
+package encapPrograms;
+public class Student 
+{
+ // Step 1: Declare variables as private in the class.          
+    private String stdName; // private field.   
+    private int stdRollNo; // private field        
+    private int stdId;
+
+ // Step 2: Apply the public getter method for each private variable.          
+    public String getStdName()
+    {
+ // Private fields can be accessed only inside the public method.             
+      return stdName;         
+    }         
+    public int getStdRollNo()
+    {             
+      return stdRollNo;         
+    }         
+    public int getStdId()
+    {             
+     return stdId:        
+    } 
+ // Step 3: Apply the public setter method for each private variable.         
+    public void setStdName(String name)
+    {             
+      stdName = name;         
+    }         
+    public void setStdRollNo(int rollNo)
+    {            
+      stdRollNo = rollNo;   
+    }         
+    public void setId(int id)
+    {             
+      stdId = id;        
+    }      
+   } 
+public class EncapsulationTest {    
+public static void main(String[][] args)
+{ 
+ // Step 4: Create the object of class Student by using the new keyword. 
+ // obj is the reference variable of class student and pointing to the object of the student class.          
+    Student obj = new Student(); 
+
+ // Step 5: Call setter methods and set the values of variables.           
+    obj.setStdName("Kiran");           
+    obj.setStdRollNo(4);           
+    obj.setStdId(12345);
+
+ // Step 6: Call the getter method to Read the value of variables and print it.           
+    System.out.println("Student's Name: " +obj.getStdName());           
+    System.out.println("Student's Roll no.: " +obj.getStdRollNo());           
+    System.out.println("Student's Id: " +obj.getStdId());    
+   } 
+}

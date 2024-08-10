@@ -1,0 +1,42 @@
+In Java, a constructor is a block of codes similar to the method.
+It is called when an instance of the class is created.
+At the time of calling constructor, memory for the object is allocated in the memory. 
+
+(i)Default connstructor
+(ii)parameterized constructor
+
+program
+-------
+public class Engine
+{
+ Boolean state;
+ int value;
+ String rotation;
+
+Engine()
+{
+  this.state=false;
+  value=100;
+  rotation =right
+}
+ Engine(Boolean state,int value)
+ {
+   this.state=state;
+   this.value=value;
+ }
+ Engine(Boolean state ,int value,String rotation)
+ {
+   this.state=state;
+   this.value=value;
+   this.rotation=rotation;
+ }
+ }
+   public class Main{
+    public static void main(String[]args)
+      {
+        Engine e1=new Engine(true,100);
+        Engine  e2=new Engine(true,200,"right");
+      }
+     }
+        
+ 
